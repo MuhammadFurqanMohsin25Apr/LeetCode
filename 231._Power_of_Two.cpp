@@ -1,13 +1,15 @@
 class Solution {
-    public:
-        bool isPowerOfTwo(int n) {
-            int m=0;
-            while(m!=30){
-                if(pow(2,m)==n){
-                    return true;
-                }
-                m++;
+public:
+    bool isPowerOfTwo(int n) {
+        int m=0;
+        int ans=1;
+        while(m!=30){
+            if(ans==n){
+                return true;
             }
-            return false;
+            ans=ans*2;
+            m++;
         }
-    };
+        return false;
+    }
+};
